@@ -1,0 +1,25 @@
+---
+kubernetes:
+  children:
+    master:
+      hosts:
+        k3s-s01:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.211
+        k3s-s02:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.212
+        k3s-s03:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.213
+    worker:
+      hosts:
+        k3s-a01:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.221
+        k3s-a02:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.222
+        k3s-a03:
+          ansible_user: svcAnsible
+          ansible_host: 192.168.1.223
